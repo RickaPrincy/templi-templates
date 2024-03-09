@@ -6,40 +6,40 @@
         {
             "key": "APP_NAME",
             "label": "App name: ",
-            "type": "input",
+            "type": "INPUT",
             "required": true
         },
         {
             "key": "AWS_REGION",
             "label": "Aws region",
-            "type": "input",
+            "type": "INPUT",
             "required": true,
             "default": "eu-west-3"
         },
         {
             "key": "PACKAGE_FULL_NAME",
             "label": "Package full name: ",
-            "type": "input",
+            "type": "INPUT",
             "required": true
         },
         {
             "key": "SG_ID",
             "label": "Security groupId",
-            "type": "input",
+            "type": "INPUT",
             "required": true,
             "default": "/poja/sg/id"
         },
         {
             "key": "SUBNET1_ID",
             "label": "Subnet1 id",
-            "type": "input",
+            "type": "INPUT",
             "required": true,
             "default": "/poja/subnet/private1/id"
         },
         {
             "key": "SUBNET2_ID",
             "label": "Subnet2 id",
-            "type": "input",
+            "type": "INPUT",
             "required": true,
             "default": "/poja/subnet/private2/id"
         }
