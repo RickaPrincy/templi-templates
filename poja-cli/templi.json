@@ -5,7 +5,7 @@
     "keys": [
         {
             "key": "APP_NAME",
-            "label": "App name: ",
+            "label": "App name",
             "type": "INPUT",
             "required": true
         },
@@ -18,7 +18,7 @@
         },
         {
             "key": "PACKAGE_FULL_NAME",
-            "label": "Package full name: ",
+            "label": "Package full name",
             "type": "INPUT",
             "required": true
         },
