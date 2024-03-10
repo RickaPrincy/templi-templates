@@ -5,11 +5,10 @@ This is just a repository that contains some templates to use with [templi](http
 ## Getting Started
 
 - Install [templi](https://github.com/RickaPrincy/Templi)
-- Clone this repository
 
 ```bash
-templi generate -t <template_to_use> -o <your_out_folder>
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -p <template_to_use> -o <your_out_folder>
 
 # Example
-templi generate -t poja-cli -o ~/poja-sary-std22052  
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/poja-cli" -o ~/poja-std22052
 ```
