@@ -7,3 +7,9 @@ python -m poja \
   --ssm-sg-id={{SG_ID}} \
   --ssm-subnet1-id={{SUBNET1_ID}}\
   --ssm-subnet2-id={{SUBNET2_ID}}
+
+cd {{APP_NAME}}
+
+git init .
+
+git commit -m "chore: init project with poja_cli"
