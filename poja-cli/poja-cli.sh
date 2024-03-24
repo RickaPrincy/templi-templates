@@ -11,5 +11,5 @@ python -m poja \
 cd {{APP_NAME}}
 
 git init .
-
-git commit -m "chore: init project with poja_cli"
+git add --all
+git commit -m "chore: init project with poja-cli"

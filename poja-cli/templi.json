@@ -34,21 +34,21 @@
       "label": "Security groupId",
       "type": "INPUT",
       "required": true,
-      "default": "/poja/sg/id"
+      "default": "/hei/nat/poja/sg/id"
     },
     {
       "key": "SUBNET1_ID",
       "label": "Subnet1 id",
       "type": "INPUT",
       "required": true,
-      "default": "/poja/subnet/private1/id"
+      "default": "/hei/nat/poja/subnet/private1/id"
     },
     {
       "key": "SUBNET2_ID",
       "label": "Subnet2 id",
       "type": "INPUT",
       "required": true,
-      "default": "/poja/subnet/private2/id"
+      "default": "/hei/nat/poja/subnet/private2/id"
     }
   ]
 }
