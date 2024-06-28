@@ -3,37 +3,15 @@
         "templi.json",
         "README.md"
     ],
+    "scripts": {
+        "before": [],
+        "after": [
+            "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/scripts/*.sh",
+            "{{TEMPLI_OUTPUT_FOLDER}}/scripts/rename-all.sh {{TEMPLI_OUTPUT_FOLDER}} PROJECT_NAME {{PROJECT_NAME}}",
+            "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/scripts"
+        ]
+    },
     "keys": [
-        {
-            "key": "AUR_NAME",
-            "label": "AUR Package_Name",
-            "type": "INPUT"
-        },
-        {
-            "key": "AUTHOR",
-            "label": "Author",
-            "type": "INPUT"
-        },
-        {
-            "key": "AUTHOR_EMAIL",
-            "label": "Author email",
-            "type": "INPUT"
-        },
-        {
-            "key": "DESCRIPTION",
-            "label": "Package Description",
-            "type": "INPUT"
-        },
-        {
-            "key": "GIT_URL",
-            "label": "Git URL",
-            "type": "INPUT"
-        },
-        {
-            "key": "NAMESPACE",
-            "label": "Library Namespace",
-            "type": "INPUT"
-        },
         {
             "key": "PROJECT_NAME",
             "label": "Project Name",
@@ -47,6 +25,37 @@
         {
             "key": "PROJECT_NAME_UPPERCASE",
             "label": "Project Name in UPPERCASE",
+            "type": "INPUT"
+        },
+        {
+            "key": "DESCRIPTION",
+            "label": "Description",
+            "type": "INPUT",
+            "clean": false
+        },
+        {
+            "key": "GIT_URL",
+            "label": "Git URL",
+            "type": "INPUT"
+        },
+        {
+            "key": "NAMESPACE",
+            "label": "Library Namespace",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUR_NAME",
+            "label": "AUR Package_Name",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUTHOR",
+            "label": "Author",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUTHOR_EMAIL",
+            "label": "Author email",
             "type": "INPUT"
         }
     ]
