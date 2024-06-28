@@ -1,0 +1,53 @@
+{
+    "ignored_paths": [
+        "templi.json",
+        "README.md"
+    ],
+    "keys": [
+        {
+            "key": "AUR_NAME",
+            "label": "AUR Package_Name",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUTHOR",
+            "label": "Author",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUTHOR_EMAIL",
+            "label": "Author email",
+            "type": "INPUT"
+        },
+        {
+            "key": "DESCRIPTION",
+            "label": "Package Description",
+            "type": "INPUT"
+        },
+        {
+            "key": "GIT_URL",
+            "label": "Git URL",
+            "type": "INPUT"
+        },
+        {
+            "key": "NAMESPACE",
+            "label": "Library Namespace",
+            "type": "INPUT"
+        },
+        {
+            "key": "PROJECT_NAME",
+            "label": "Project Name",
+            "type": "INPUT"
+        },
+        {
+            "key": "PROJECT_NAME_LOWERCASE",
+            "label": "Project Name in LOWERCASE",
+            "type": "INPUT"
+        },
+        {
+            "key": "PROJECT_NAME_UPPERCASE",
+            "label": "Project Name in UPPERCASE",
+            "type": "INPUT"
+        }
+    ]
+}

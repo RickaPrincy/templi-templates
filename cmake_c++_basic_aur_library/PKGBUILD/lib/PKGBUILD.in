@@ -1,0 +1,20 @@
+# Author: {{AUTHOR}} <{{AUTHOR_EMAIL}}>
+pkgname={{AUR_NAME}}
+pkgver=@{{PROJECT_NAME_UPPERCASE}}_LIB_VERSION@
+pkgrel=1
+pkgdesc="{{DESCRIPTION}}"
+arch=('x86_64')
+depends=()
+url="{{GIT_URL}}"
+license=('MIT')
+source=("{{PROJECT_NAME_LOWERCASE}}@$pkgver.tar.gz::{{GIT_URL}}/releases/download/v@{{PROJECT_NAME_UPPERCASE}}_VERSION@/{{PROJECT_NAME_LOWERCASE}}@$pkgver.tar.gz")
+
+sha256sums=("SHASUM")
+
+package() {
+    echo "Installing to \"$pkgdir/usr/\""
+    mkdir -p "$pkgdir/usr/include"
+    mkdir -p "$pkgdir/usr/lib"
+    cp -r "{{PROJECT_NAME_LOWERCASE}}@$pkgver/include" "$pkgdir/usr"
+    cp -r "{{PROJECT_NAME_LOWERCASE}}@$pkgver/lib" "$pkgdir/usr"
+}
