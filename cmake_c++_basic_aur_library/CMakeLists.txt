@@ -24,9 +24,9 @@ set({{PROJECT_NAME_UPPERCASE}}_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
 
 # list of options
 option(BUILD_SHARED_LIBS "Build rcli as a shared library"
-       ${ {{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT})
+       $\{{{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT})
 option({{PROJECT_NAME_UPPERCASE}}_LIB_BUILD "Build {{PROJECT_NAME}} lib" ON)
-option({{PROJECT_NAME_UPPERCASE}}_LIB_INSTALL "Install {{PROJECT_NAME}} lib" ${ {{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT})
+option({{PROJECT_NAME_UPPERCASE}}_LIB_INSTALL "Install {{PROJECT_NAME}} lib" $\{{{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT})
 
 # configure build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -42,15 +42,15 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release")
 endif()
 
 if({{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT)
-  configure_file(${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/PKGBUILD/lib/PKGBUILD.in
-                 ${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/PKGBUILD/lib/PKGBUILD @ONLY)
+  configure_file($\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/PKGBUILD/lib/PKGBUILD.in
+                 $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/PKGBUILD/lib/PKGBUILD @ONLY)
 
-  configure_file(${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/release_config/create_release.sh
-                 ${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/create_release.sh @ONLY)
+  configure_file($\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/release_config/create_release.sh
+                 $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/create_release.sh @ONLY)
 
   configure_file(
-    ${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/${ {{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp.in
-    ${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/${ {{PROJECT_NAME_UPPERCASE}}_LIB_NAME}/${ {{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp
+    $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp.in
+    $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp
     @ONLY)
 endif()
 
@@ -64,7 +64,7 @@ if({{PROJECT_NAME_UPPERCASE}}_TEST)
   foreach(submodule ${SUBMODULES})
     execute_process(
       COMMAND ${GIT_EXECUTABLE} submodule update --init ${submodule}
-      WORKING_DIRECTORY ${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}
+      WORKING_DIRECTORY $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}
       RESULT_VARIABLE GIT_SUBMOD_RESULT)
 
     if(NOT GIT_SUBMOD_RESULT EQUAL "0")
@@ -91,9 +91,9 @@ endif()
 # clang-format configuration
 find_program(CLANG_FORMAT_EXECUTABLE NAMES clang-format)
 if(CLANG_FORMAT_EXECUTABLE)
-  file(GLOB_RECURSE ALL_SOURCE_FILES "${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/src/lib/*.cpp"
-       "${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/src/cli/*.cpp"
-       "${ {{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/{{PROJECT_NAME}}/*.hpp")
+  file(GLOB_RECURSE ALL_SOURCE_FILES "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/src/lib/*.cpp"
+       "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/src/cli/*.cpp"
+       "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/{{PROJECT_NAME}}/*.hpp")
   add_custom_target(
     clang-format
     COMMAND ${CLANG_FORMAT_EXECUTABLE} -i -style=file ${ALL_SOURCE_FILES}
