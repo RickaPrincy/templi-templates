@@ -1,0 +1,54 @@
+{
+    "ignored_paths": [
+        "templi.json",
+        "scripts/rename-all.sh",
+        "README.md"
+    ],
+    "keys": [
+        {
+            "key": "PROJECT_NAME",
+            "label": "Project Name",
+            "type": "INPUT"
+        },
+        {
+            "key": "PROJECT_NAME_LOWERCASE",
+            "label": "Project in Lowercase",
+            "type": "INPUT"
+        },
+        {
+            "key": "PROJECT_NAME_UPPERCASE",
+            "label": "Project in Uppercase",
+            "type": "INPUT"
+        },
+        {
+            "key": "NAMESPACE",
+            "label": "Lib Namespace",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUTHOR",
+            "label": "Author",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUTHOR_EMAIL",
+            "label": "Author Email",
+            "type": "INPUT"
+        },
+        {
+            "key": "DESCRIPTION",
+            "label": "Description",
+            "type": "INPUT"
+        },
+        {
+            "key": "GIT_URL",
+            "label": "Git url",
+            "type": "INPUT"
+        },
+        {
+            "key": "AUR_NAME",
+            "label": "AUR Package Name",
+            "type": "INPUT"
+        }
+    ]
+}
