@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 
-project({{PROJECT_NAME}}_tools VERSION 3.2.1)
+project({{PROJECT_NAME}}_tools VERSION 0.0.1)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,8 +17,8 @@ endif()
 
 # target names
 set({{PROJECT_NAME_UPPERCASE}}_LIB_NAME {{PROJECT_NAME}})
-set({{PROJECT_NAME_UPPERCASE}}_LIB_VERSION 1.0.1)
-set({{PROJECT_NAME_UPPERCASE}}_LIB_VERSION_MAJOR 1)
+set({{PROJECT_NAME_UPPERCASE}}_LIB_VERSION 0.0.1)
+set({{PROJECT_NAME_UPPERCASE}}_LIB_VERSION_MAJOR 0)
 set({{PROJECT_NAME_UPPERCASE}}_VERSION ${PROJECT_VERSION})
 set({{PROJECT_NAME_UPPERCASE}}_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
 
@@ -56,28 +56,28 @@ endif()
 
 add_subdirectory(src)
 
-# Test configuration
-if({{PROJECT_NAME_UPPERCASE}}_TEST)
-  set(SUBMODULES external/googletest)
-  find_package(Git REQUIRED)
+# # Test configuration
+# if({{PROJECT_NAME_UPPERCASE}}_TEST)
+#   set(SUBMODULES external/googletest)
+#   find_package(Git REQUIRED)
 
-  foreach(submodule ${SUBMODULES})
-    execute_process(
-      COMMAND ${GIT_EXECUTABLE} submodule update --init ${submodule}
-      WORKING_DIRECTORY $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}
-      RESULT_VARIABLE GIT_SUBMOD_RESULT)
+#   foreach(submodule ${SUBMODULES})
+#     execute_process(
+#       COMMAND ${GIT_EXECUTABLE} submodule update --init ${submodule}
+#       WORKING_DIRECTORY $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}
+#       RESULT_VARIABLE GIT_SUBMOD_RESULT)
 
-    if(NOT GIT_SUBMOD_RESULT EQUAL "0")
-      message(
-        FATAL_ERROR
-          "git submodule update --init  ${submodule} failed with ${GIT_SUBMOD_RESULT}, please checkout submodules"
-      )
-    endif()
-  endforeach()
+#     if(NOT GIT_SUBMOD_RESULT EQUAL "0")
+#       message(
+#         FATAL_ERROR
+#           "git submodule update --init  ${submodule} failed with ${GIT_SUBMOD_RESULT}, please checkout submodules"
+#       )
+#     endif()
+#   endforeach()
 
-  add_subdirectory(external/googletest)
-  add_subdirectory(tests)
-endif()
+#   add_subdirectory(external/googletest)
+#   add_subdirectory(tests)
+# endif()
 
 execute_process(
   COMMAND git --version

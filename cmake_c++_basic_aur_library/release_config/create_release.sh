@@ -1,10 +1,4 @@
 #!/bin/bash
-if [ "$#" -lt 1 ]; then
-    exit 1
-fi
-
-RELEASE_TO_CREATE="$1"
-
 SHA_PGKBUILD_LINE=12
 release_path=()
 
