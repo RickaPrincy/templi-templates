@@ -4,6 +4,14 @@
         "scripts/rename-all.sh",
         "README.md"
     ],
+    "scripts": {
+        "before": [],
+        "after": [
+            "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/scripts/*.sh",
+            "{{TEMPLI_OUTPUT_FOLDER}}/scripts/rename-all.sh {{TEMPLI_OUTPUT_FOLDER}} PROJECT_NAME {{PROJECT_NAME}}",
+            "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/scripts"
+        ]
+    },
     "keys": [
         {
             "key": "PROJECT_NAME",

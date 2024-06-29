@@ -9,6 +9,9 @@ This is just a repository that contains some templates to use with [templi](http
 ```bash
 templi generate -t https://github.com/RickaPrincy/templi-templates.git -p <template_to_use> -o <your_out_folder>
 
-# Example
+# Example1
 templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/poja-cli" -o ~/poja-std22052
+
+# Example2
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/cmake_c++_basic_aur_library" -o ~/cmake_c++_basic_aur_library
 ```
