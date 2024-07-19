@@ -1,14 +1,14 @@
 {
     "ignored_paths": [
         "templi.json",
-        "scripts/rename-all.sh"
+        ".templi-scripts/rename-all.sh"
     ],
     "scripts": {
         "before": [],
         "after": [
-            "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/scripts/*.sh",
-            "{{TEMPLI_OUTPUT_FOLDER}}/scripts/rename-all.sh {{TEMPLI_OUTPUT_FOLDER}} PROJECT_NAME {{PROJECT_NAME}}",
-            "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/scripts",
+            "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/*.sh",
+            "{{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/rename-all.sh {{TEMPLI_OUTPUT_FOLDER}} PROJECT_NAME {{PROJECT_NAME}}",
+            "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts",
             "cd {{TEMPLI_OUTPUT_FOLDER}}; git init .; git add --all; git commit -m \"chore: project generated with templi\"; git remote add origin {{GIT_URL}}"
         ]
     },

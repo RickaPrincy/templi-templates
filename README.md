@@ -13,5 +13,5 @@ templi generate -t https://github.com/RickaPrincy/templi-templates.git -p <templ
 templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/poja-cli" -o ~/poja-std22052
 
 # Example2
-templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/cmake_c++_basic_aur_library" -o ~/cmake_c++_basic_aur_library
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/libc++" -o ~/libc++
 ```

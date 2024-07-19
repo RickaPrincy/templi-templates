@@ -35,7 +35,7 @@ create_lib_release(){
     cp -r ../build/cmake "${RELEASE_NAME}/lib/cmake/{{PROJECT_NAME}}"
     cp -r ../include/{{PROJECT_NAME}} "${RELEASE_NAME}/include/{{PROJECT_NAME}}"
 
-    create_tar_release "${RELEASE_NAME}" "../PKGBUILD/lib/PKGBUILD"
+    create_tar_release "${RELEASE_NAME}" "../PKGBUILD"
 }
 
 create_lib_release
