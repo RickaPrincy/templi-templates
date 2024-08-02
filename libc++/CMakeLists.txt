@@ -50,7 +50,7 @@ if({{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT)
                  $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/create-release.sh @ONLY)
 
   configure_file(
-    $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp.in
+    $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/.templates/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp.in
     $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}/$\{{{PROJECT_NAME_UPPERCASE}}_LIB_NAME}Config.hpp
     @ONLY)
 endif()
@@ -60,7 +60,7 @@ add_subdirectory(sources)
 # clang-format configuration
 find_program(CLANG_FORMAT_EXECUTABLE NAMES clang-format)
 if(CLANG_FORMAT_EXECUTABLE)
-  file(GLOB_RECURSE ALL_SOURCE_FILES "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/sources/lib/*.cpp"
+  file(GLOB_RECURSE ALL_SOURCE_FILES "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/sources/*.cpp"
        "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/{{PROJECT_NAME}}/*.hpp")
   add_custom_target(
     clang-format
