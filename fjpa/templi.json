@@ -1,0 +1,44 @@
+{
+  "scripts": {
+    "before": [],
+    "after": [
+      "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/*.sh",
+      "{{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/rename-package.sh {{TEMPLI_OUTPUT_FOLDER}} PACKAGE_GROUP_1 {{PACKAGE_GROUP_1}}",
+      "{{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/rename-package.sh {{TEMPLI_OUTPUT_FOLDER}} PACKAGE_GROUP_2 {{PACKAGE_GROUP_2}}",
+      "{{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/rename-package.sh {{TEMPLI_OUTPUT_FOLDER}} PACKAGE_GROUP_3 {{PACKAGE_GROUP_3}}",
+      "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts"
+    ]
+  },
+  "ignored_paths": [
+    "templi.json",
+    "README.md",
+    ".gitignore",
+    ".idea/encodings.xml",
+    ".idea/vcs.xml",
+    ".idea/misc.xml",
+    ".idea/.gitignore",
+    ".idea/uiDesigner.xml"
+  ],
+  "keys": [
+    {
+      "key": "PACKAGE_GROUP",
+      "label": "Package group (ex: com.ricka.princy)",
+      "type": "INPUT"
+    },
+    {
+      "key": "PACKAGE_GROUP_1",
+      "label": "the first part of the package group(ex: [COM].ricka.princy)",
+      "type": "INPUT"
+    },
+    {
+      "key": "PACKAGE_GROUP_2",
+      "label": "the first part of the package group(ex: com.[RICKA].princy)",
+      "type": "INPUT"
+    },
+    {
+      "key": "PACKAGE_GROUP_3",
+      "label": "the first part of the package group(ex: com.ricka.[PRINCY])",
+      "type": "INPUT"
+    }
+  ]
+}
