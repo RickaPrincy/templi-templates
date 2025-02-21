@@ -1,4 +1,4 @@
-package {{PACKAGE_GROUP}}.model;
+package {{PACKAGE_GROUP}}.fjpa.model;
 
 public enum Order {
     DESC,

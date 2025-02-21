@@ -1,4 +1,4 @@
-package {{PACKAGE_GROUP}}.annotation;
+package {{PACKAGE_GROUP}}.fjpa.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

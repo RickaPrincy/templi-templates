@@ -1,6 +1,6 @@
-package {{PACKAGE_GROUP}};
+package {{PACKAGE_GROUP}}.fjpa;
 
-import {{PACKAGE_GROUP}}.model.*;
+import {{PACKAGE_GROUP}}.fjpa.model.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -10,7 +10,7 @@ public class QueryGenerator<T> {
     private static List<String> usedRelations = new ArrayList<>();
     private static List<InnerRelation> innerRelations = new ArrayList<>();
 
-    public QueryGenerator({{PACKAGE_GROUP}}.ReflectEntity<T> reflectEntity) {
+    public QueryGenerator(ReflectEntity<T> reflectEntity) {
         this.reflectEntity = reflectEntity;
     }
 

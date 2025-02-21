@@ -1,4 +1,4 @@
-package {{PACKAGE_GROUP}};
+package {{PACKAGE_GROUP}}.fjpa;
 
 public class QueryTemplate {
     public static String selectAll(){

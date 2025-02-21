@@ -1,6 +1,6 @@
-package {{PACKAGE_GROUP}};
+package {{PACKAGE_GROUP}}.fjpa;
 
-import {{PACKAGE_GROUP}}.model.ReflectAttribute;
+import {{PACKAGE_GROUP}}.fjpa.model.ReflectAttribute;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

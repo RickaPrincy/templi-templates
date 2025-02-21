@@ -1,7 +1,7 @@
-package {{PACKAGE_GROUP}}.model;
+package {{PACKAGE_GROUP}}.fjpa.model;
 
-import {{PACKAGE_GROUP}}.QueryGenerator;
-import {{PACKAGE_GROUP}}.ReflectEntity;
+import {{PACKAGE_GROUP}}.fjpa.QueryGenerator;
+import {{PACKAGE_GROUP}}.fjpa.ReflectEntity;
 
 import java.util.Objects;
 

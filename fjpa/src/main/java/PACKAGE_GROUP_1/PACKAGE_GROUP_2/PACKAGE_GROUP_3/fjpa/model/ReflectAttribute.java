@@ -1,4 +1,4 @@
-package {{PACKAGE_GROUP}}.model;
+package {{PACKAGE_GROUP}}.fjpa.model;
 
 import java.lang.reflect.Method;
 

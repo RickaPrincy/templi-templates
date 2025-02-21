@@ -1,4 +1,4 @@
-package {{PACKAGE_GROUP}}.utils;
+package {{PACKAGE_GROUP}}.fjpa.utils;
 
 public class Utils {
     public static String toCamelCase(String text){

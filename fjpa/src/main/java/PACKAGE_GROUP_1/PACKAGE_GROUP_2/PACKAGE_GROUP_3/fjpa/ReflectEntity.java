@@ -1,8 +1,8 @@
-package {{PACKAGE_GROUP}};
+package {{PACKAGE_GROUP}}.fjpa;
 
-import {{PACKAGE_GROUP}}.annotation.*;
-import {{PACKAGE_GROUP}}.model.ReflectAttribute;
-import {{PACKAGE_GROUP}}.utils.Utils;
+import {{PACKAGE_GROUP}}.fjpa.annotation.*;
+import {{PACKAGE_GROUP}}.fjpa.model.ReflectAttribute;
+import {{PACKAGE_GROUP}}.fjpa.utils.Utils;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

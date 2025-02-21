@@ -46,6 +46,9 @@ if({{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT)
   configure_file($\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/.templates/PKGBUILD.in
                  $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/PKGBUILD @ONLY)
 
+  configure_file($\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/.templates/install.sh.in
+                 $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/install.sh @ONLY)
+
   configure_file($\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/.templates/create-release.sh.in
                  $\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/create-release.sh @ONLY)
 

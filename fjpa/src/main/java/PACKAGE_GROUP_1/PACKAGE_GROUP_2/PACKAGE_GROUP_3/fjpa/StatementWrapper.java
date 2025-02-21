@@ -1,4 +1,4 @@
-package {{PACKAGE_GROUP}};
+package{{PACKAGE_GROUP}}.fjpa;
 
 import java.sql.*;
 import java.time.Instant;
