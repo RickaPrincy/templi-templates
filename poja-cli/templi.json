@@ -6,45 +6,45 @@
     ],
     "before": []
   },
-  "ignored_paths": [
+  "excludes": [
     "templi.json"
   ],
   "keys": [
     {
-      "key": "APP_NAME",
+      "name": "APP_NAME",
       "label": "App name",
       "type": "INPUT",
       "required": true
     },
     {
-      "key": "AWS_REGION",
+      "name": "AWS_REGION",
       "label": "Aws region",
       "type": "INPUT",
       "required": true,
       "default": "eu-west-3"
     },
     {
-      "key": "PACKAGE_FULL_NAME",
+      "name": "PACKAGE_FULL_NAME",
       "label": "Package full name",
       "type": "INPUT",
       "required": true
     },
     {
-      "key": "SG_ID",
+      "name": "SG_ID",
       "label": "Security groupId",
       "type": "INPUT",
       "required": true,
       "default": "/hei/nat/poja/sg/id"
     },
     {
-      "key": "SUBNET1_ID",
+      "name": "SUBNET1_ID",
       "label": "Subnet1 id",
       "type": "INPUT",
       "required": true,
       "default": "/hei/nat/poja/subnet/private1/id"
     },
     {
-      "key": "SUBNET2_ID",
+      "name": "SUBNET2_ID",
       "label": "Subnet2 id",
       "type": "INPUT",
       "required": true,

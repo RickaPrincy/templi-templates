@@ -9,7 +9,7 @@
       "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts"
     ]
   },
-  "ignored_paths": [
+  "excludes": [
     "templi.json",
     "README.md",
     ".gitignore",
@@ -21,22 +21,22 @@
   ],
   "keys": [
     {
-      "key": "PACKAGE_GROUP",
+      "name": "PACKAGE_GROUP",
       "label": "Package group (ex: com.ricka.princy)",
       "type": "INPUT"
     },
     {
-      "key": "PACKAGE_GROUP_1",
+      "name": "PACKAGE_GROUP_1",
       "label": "the first part of the package group(ex: [COM].ricka.princy)",
       "type": "INPUT"
     },
     {
-      "key": "PACKAGE_GROUP_2",
+      "name": "PACKAGE_GROUP_2",
       "label": "the first part of the package group(ex: com.[RICKA].princy)",
       "type": "INPUT"
     },
     {
-      "key": "PACKAGE_GROUP_3",
+      "name": "PACKAGE_GROUP_3",
       "label": "the first part of the package group(ex: com.ricka.[PRINCY])",
       "type": "INPUT"
     }

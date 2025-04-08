@@ -1,63 +1,63 @@
 {
-    "ignored_paths": [
-        "templi.json",
-        ".templi-scripts/rename-all.sh"
-    ],
-    "scripts": {
-        "before": [],
-        "after": [
-            "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/*.sh",
-            "{{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/rename-all.sh {{TEMPLI_OUTPUT_FOLDER}} PROJECT_NAME {{PROJECT_NAME}}",
-            "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts",
-            "cd {{TEMPLI_OUTPUT_FOLDER}}; git init .; git add --all; git commit -m \"chore: project generated with templi\"; git remote add origin {{GIT_URL}}"
-        ]
-    },
-    "keys": [
-        {
-            "key": "PROJECT_NAME",
-            "label": "Project Name",
-            "type": "INPUT"
-        },
-        {
-            "key": "PROJECT_NAME_LOWERCASE",
-            "label": "Project in Lowercase",
-            "type": "INPUT"
-        },
-        {
-            "key": "PROJECT_NAME_UPPERCASE",
-            "label": "Project in Uppercase",
-            "type": "INPUT"
-        },
-        {
-            "key": "NAMESPACE",
-            "label": "Lib Namespace",
-            "type": "INPUT"
-        },
-        {
-            "key": "AUTHOR",
-            "label": "Author",
-            "type": "INPUT"
-        },
-        {
-            "key": "AUTHOR_EMAIL",
-            "label": "Author Email",
-            "type": "INPUT"
-        },
-        {
-            "key": "DESCRIPTION",
-            "label": "Description",
-            "type": "INPUT",
-            "clean": false
-        },
-        {
-            "key": "GIT_URL",
-            "label": "Git url",
-            "type": "INPUT"
-        },
-        {
-            "key": "AUR_NAME",
-            "label": "AUR Package Name",
-            "type": "INPUT"
-        }
+  "excludes": [
+    "templi.json",
+    ".templi-scripts/rename-all.sh"
+  ],
+  "scripts": {
+    "before": [],
+    "after": [
+      "chmod +x {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/*.sh",
+      "{{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts/rename-all.sh {{TEMPLI_OUTPUT_FOLDER}} PROJECT_NAME {{PROJECT_NAME}}",
+      "rm -rf {{TEMPLI_OUTPUT_FOLDER}}/.templi-scripts",
+      "cd {{TEMPLI_OUTPUT_FOLDER}}; git init .; git add --all; git commit -m \"chore: project generated with templi\"; git remote add origin {{GIT_URL}}"
     ]
+  },
+  "keys": [
+    {
+      "name": "PROJECT_NAME",
+      "label": "Project Name",
+      "type": "INPUT"
+    },
+    {
+      "name": "PROJECT_NAME_LOWERCASE",
+      "label": "Project in Lowercase",
+      "type": "INPUT"
+    },
+    {
+      "name": "PROJECT_NAME_UPPERCASE",
+      "label": "Project in Uppercase",
+      "type": "INPUT"
+    },
+    {
+      "name": "NAMESPACE",
+      "label": "Lib Namespace",
+      "type": "INPUT"
+    },
+    {
+      "name": "AUTHOR",
+      "label": "Author",
+      "type": "INPUT"
+    },
+    {
+      "name": "AUTHOR_EMAIL",
+      "label": "Author Email",
+      "type": "INPUT"
+    },
+    {
+      "name": "DESCRIPTION",
+      "label": "Description",
+      "type": "INPUT",
+      "clean": false
+    },
+    {
+      "name": "GIT_URL",
+      "label": "Git url",
+      "type": "INPUT"
+    },
+    {
+      "name": "AUR_NAME",
+      "label": "AUR Package Name",
+      "type": "INPUT"
+    }
+  ]
 }
