@@ -12,14 +12,11 @@ templi generate -t https://github.com/RickaPrincy/templi-templates.git -p <templ
 
 ### Examples
 
+
 ```bash
-templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/poja-cli" -o ~/poja-std22052
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "libc++" -o ~/libc++
 ```
 
 ```bash
-templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/libc++" -o ~/libc++
-```
-
-```bash
-templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "/fjpa" -o ~/myproject
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -p "fjpa" -o ~/myproject
 ```
