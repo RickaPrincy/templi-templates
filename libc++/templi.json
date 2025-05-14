@@ -6,10 +6,10 @@
   "scripts": {
     "before": [],
     "after": [
-      "cd {{TEMPLI_OUTPUT_FOLDER}}; git init .; git add --all; git commit -m \"chore: project generated with templi\"; git remote add origin {{GIT_URL}}"
+      "cd {{TEMPLI_OUTPUT_FOLDER}}; rm -rf .git"
     ]
   },
-  "keys": [
+  "placeholders": [
     {
       "name": "PROJECT_NAME",
       "label": "Project Name",
@@ -44,7 +44,7 @@
       "name": "DESCRIPTION",
       "label": "Description",
       "type": "INPUT",
-      "clean": false
+      "remove_spaces": false
     },
     {
       "name": "GIT_URL",
