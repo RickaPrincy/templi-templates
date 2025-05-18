@@ -3,12 +3,6 @@
     "templi.json",
     ".templi-scripts/rename-all.sh"
   ],
-  "scripts": {
-    "before": [],
-    "after": [
-      "cd {{TEMPLI_OUTPUT_FOLDER}}; rm -rf .git"
-    ]
-  },
   "placeholders": [
     {
       "name": "PROJECT_NAME",
