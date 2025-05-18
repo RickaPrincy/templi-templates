@@ -12,6 +12,9 @@ templi generate -t https://github.com/RickaPrincy/templi-templates.git -s <templ
 
 ### Examples
 
+```bash
+templi generate -t https://github.com/RickaPrincy/templi-templates.git -s "nestjs" -o ~/nestjs
+```
 
 ```bash
 templi generate -t https://github.com/RickaPrincy/templi-templates.git -s "libc++" -o ~/libc++
