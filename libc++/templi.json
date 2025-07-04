@@ -7,48 +7,110 @@
     {
       "name": "PROJECT_NAME",
       "label": "Project Name",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "required"
+        },
+        {
+          "pattern": "^[a-zA-Z][a-zA-Z_]*$",
+          "message": "Only letters and underscores, must start with a letter."
+        }
+      ]
     },
     {
       "name": "PROJECT_NAME_LOWERCASE",
       "label": "Project in Lowercase",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "required"
+        },
+        {
+          "pattern": "^[a-z][a-z_]*$",
+          "message": "Only lowercase letters and underscores, must start with a letter."
+        }
+      ]
     },
     {
       "name": "PROJECT_NAME_UPPERCASE",
       "label": "Project in Uppercase",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "required"
+        },
+        {
+          "pattern": "^[A-Z][A-Z_]*$",
+          "message": "Only uppercase letters and underscores, must start with a letter."
+        }
+      ]
     },
     {
       "name": "NAMESPACE",
       "label": "Lib Namespace",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "required"
+        },
+        {
+          "pattern": "^[a-zA-Z][a-zA-Z_]*$",
+          "message": "Only letters and underscores, must start with a letter."
+        }
+      ]
     },
     {
       "name": "AUTHOR",
       "label": "Author",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "required"
+        }
+      ]
     },
     {
       "name": "AUTHOR_EMAIL",
       "label": "Author Email",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "email"
+        }
+      ]
     },
     {
       "name": "DESCRIPTION",
       "label": "Description",
-      "type": "INPUT",
-      "remove_spaces": false
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "optional"
+        }
+      ]
     },
     {
       "name": "GIT_URL",
-      "label": "Git url",
-      "type": "INPUT"
+      "label": "Github url",
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "^https:\\/\\/(www\\.)?github\\.com\\/[a-zA-Z0-9_.-]+\\/[a-zA-Z0-9_.-]+$",
+          "message": "Enter a valid GitHub repo URL (e.g. https://github.com/user/repo)."
+        }
+      ]
     },
     {
       "name": "AUR_NAME",
       "label": "AUR Package Name",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "^[a-zA-Z][a-zA-Z_]*$",
+          "message": "Only letters and underscores, must start with a letter."
+        }
+      ]
     }
   ]
 }

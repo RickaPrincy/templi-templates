@@ -13,22 +13,42 @@
     {
       "name": "PACKAGE_GROUP",
       "label": "Package group (ex: com.ricka.princy)",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "lowercase"
+        }
+      ]
     },
     {
       "name": "PACKAGE_GROUP_1",
       "label": "the first part of the package group(ex: [COM].ricka.princy)",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "lowercase"
+        }
+      ]
     },
     {
       "name": "PACKAGE_GROUP_2",
       "label": "the first part of the package group(ex: com.[RICKA].princy)",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "lowercase"
+        }
+      ]
     },
     {
       "name": "PACKAGE_GROUP_3",
       "label": "the first part of the package group(ex: com.ricka.[PRINCY])",
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "lowercase"
+        }
+      ]
     }
   ]
 }
