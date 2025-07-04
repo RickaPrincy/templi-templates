@@ -67,20 +67,26 @@
     {
       "label": "App Name",
       "name": "appname",
-      "required": true,
-      "type": "INPUT"
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "required"
+        }
+      ]
     },
     {
       "label": "Description",
       "name": "description",
-      "required": true,
-      "type": "INPUT",
-      "remove_spaces": false
+      "type": "TEXT",
+      "validators": [
+        {
+          "pattern": "optional"
+        }
+      ]
     },
     {
       "label": "License",
       "name": "license",
-      "required": true,
       "type": "SELECT",
       "choices": [
         "MIT",
