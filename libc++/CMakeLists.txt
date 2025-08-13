@@ -34,6 +34,10 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
+if(NOT CMAKE_BUILD_SHARED_LIBS)
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+endif()
+
 if(WIN32)
   add_compile_options(WIN32)
 endif()
@@ -59,21 +63,6 @@ if({{PROJECT_NAME_UPPERCASE}}_IS_MAIN_PROJECT)
 endif()
 
 add_subdirectory(sources)
-
-# clang-format configuration
-find_program(CLANG_FORMAT_EXECUTABLE NAMES clang-format)
-if(CLANG_FORMAT_EXECUTABLE)
-  file(GLOB_RECURSE ALL_SOURCE_FILES "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/sources/*.cpp"
-       "$\{{{PROJECT_NAME_UPPERCASE}}_SOURCE_DIR}/include/{{PROJECT_NAME}}/*.hpp")
-  add_custom_target(
-    clang-format
-    COMMAND ${CLANG_FORMAT_EXECUTABLE} -i -style=file ${ALL_SOURCE_FILES}
-    COMMENT "Running clang-format")
-else()
-  message(
-    WARNING "clang-format not found. Clang-format target will not be available."
-  )
-endif()
 
 # CPack configuration
 set(CPACK_PACKAGE_VENDOR "{{AUTHOR}} <{{AUTHOR_EMAIL}}>")

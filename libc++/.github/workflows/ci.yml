@@ -25,7 +25,7 @@ jobs:
     strategy:
       matrix:
         path:
-          - 'src'
+          - 'sources'
           - 'include'
     steps:
     - uses: actions/checkout@v4
