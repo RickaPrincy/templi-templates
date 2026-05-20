@@ -15,9 +15,7 @@
       "label": "Package group (ex: com.ricka.princy)",
       "type": "TEXT",
       "validators": [
-        {
-          "pattern": "lowercase"
-        }
+  
       ]
     },
     {
