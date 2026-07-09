@@ -1,9 +1,9 @@
 import { Controller, Get, Query } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
-import { Authenticated } from "src/auth/decorator";
-import { Role } from "src/model";
+import { Authenticated } from "@nestapp/auth/decorator";
+import { Role } from "@nestapp/entities";
 import { User } from "../model";
-import { UserService } from "src/service";
+import { UserService } from "@nestapp/services";
 import {
   ApiCriteria,
   ApiPagination,

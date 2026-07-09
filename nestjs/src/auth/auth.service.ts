@@ -2,10 +2,10 @@ import * as bcrypt from "bcrypt";
 import { ForbiddenException, Injectable } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 
-import { User } from "src/model";
-import { UserService } from "src/service";
+import { User } from "@nestapp/entities";
+import { UserService } from "@nestapp/services";
 import { Whoami, JwtPayload, SigninPayload, SignupPayload } from "./model";
-import { UserMapper } from "src/rest/mapper";
+import { UserMapper } from "@nestapp/rest/mapper";
 
 @Injectable()
 export class AuthService {

@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { Role } from "src/model";
+import { Role } from "@nestapp/entities";
 
 export class User {
   @ApiProperty({ format: "uuid" })

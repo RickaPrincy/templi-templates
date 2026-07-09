@@ -7,9 +7,9 @@ import {
   AuthenticatedUser,
   AuthenticatedUserToken,
 } from "./decorator";
-import { User } from "src/model";
+import { User } from "@nestapp/entities";
 import { Whoami, SigninPayload, SignupPayload } from "./model";
-import { ApiRequiredSpec } from "src/rest/swagger/decorator";
+import { ApiRequiredSpec } from "@nestapp/rest/swagger/decorator";
 
 @Controller()
 @ApiTags("Security")

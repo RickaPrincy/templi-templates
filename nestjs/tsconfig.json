@@ -1,21 +1,61 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "types": [
+      "node",
+      "jest"
+    ],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolvePackageJsonExports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
+    "strictPropertyInitialization": false,
+    "target": "ES2023",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "strictBindCallApply": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@nestapp/auth": [
+        "./src/auth"
+      ],
+      "@nestapp/rest": [
+        "./src/rest"
+      ],
+      "@nestapp/entities": [
+        "./src/entities"
+      ],
+      "@nestapp/services": [
+        "./src/services"
+      ],
+      "@nestapp/modules": [
+        "./src/modules"
+      ],
+      "@nestapp/auth/*": [
+        "./src/auth/*"
+      ],
+      "@nestapp/rest/*": [
+        "./src/rest/*"
+      ],
+      "@nestapp/entities/*": [
+        "./src/entities/*"
+      ],
+      "@nestapp/services/*": [
+        "./src/services/*"
+      ],
+      "@nestapp/modules/*": [
+        "./src/modules/*"
+      ]
+    }
   }
 }

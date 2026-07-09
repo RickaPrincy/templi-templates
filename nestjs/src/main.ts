@@ -8,7 +8,7 @@ config();
 
 function setupSwagger<T>(app: INestApplication<T>) {
   const openapiConfig = new DocumentBuilder()
-    .setTitle("{{appname}} Api")
+    .setTitle("dumb Api")
     .setDescription("{{description}}")
     .setVersion("0.0.1")
     .addServer("http://localhost:3000")

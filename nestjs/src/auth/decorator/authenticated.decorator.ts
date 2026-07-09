@@ -2,7 +2,7 @@ import { SetMetadata, UseGuards, applyDecorators } from "@nestjs/common";
 import { ApiBearerAuth } from "@nestjs/swagger";
 
 import { JwtAuthGuard, RoleGuard, SelfMatcherGuard } from "../guards";
-import { Role } from "src/model";
+import { Role } from "@nestapp/entities";
 
 export function Authenticated({
   roles = [],

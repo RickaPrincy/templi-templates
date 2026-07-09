@@ -2,11 +2,11 @@ import { Repository } from "typeorm";
 import { BadRequestException, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 
-import { User } from "src/model";
-import { Criteria } from "./utils/criteria";
-import { PaginationParams } from "src/rest/decorator";
-import { UPDATED_AT_CREATED_AT_ORDER_BY } from "./utils/default-order-by";
-import { findByCriteria } from "./utils/find-by-criteria";
+import { User } from "@nestapp/entities";
+import { Criteria } from "./common/criteria";
+import { PaginationParams } from "@nestapp/rest/decorator";
+import { UPDATED_AT_CREATED_AT_ORDER_BY } from "./common/default-order-by";
+import { findByCriteria } from "./common/find-by-criteria";
 
 @Injectable()
 export class UserService {

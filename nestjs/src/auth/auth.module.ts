@@ -8,9 +8,9 @@ import { AuthService } from "./auth.service";
 import { AuthController } from "./auth.controller";
 import { JwtStrategy } from "./startegy";
 import { JwtAuthGuard, RoleGuard, SelfMatcherGuard } from "./guards";
-import { User } from "src/model";
-import { UserService } from "src/service";
-import { UserMapper } from "src/rest/mapper";
+import { User } from "@nestapp/entities";
+import { UserService } from "@nestapp/services";
+import { UserMapper } from "@nestapp/rest/mapper";
 
 @Global()
 @Module({

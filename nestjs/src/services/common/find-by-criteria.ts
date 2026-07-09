@@ -1,7 +1,7 @@
 import { FindManyOptions, ObjectLiteral, Repository } from "typeorm";
 import { Criteria } from "./criteria";
 import { createPagination } from "./create-pagination";
-import { PaginationParams } from "src/rest/decorator";
+import { PaginationParams } from "@nestapp/rest/decorator";
 
 export const findByCriteria = async <T extends ObjectLiteral>({
   pagination,

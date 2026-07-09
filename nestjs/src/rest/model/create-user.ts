@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsDateString, IsEnum, IsString, IsUUID } from "class-validator";
-import { Role } from "src/model";
+import { Role } from "@nestapp/entities";
 
 export class CreateUser {
   @IsUUID()
