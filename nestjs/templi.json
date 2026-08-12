@@ -1,5 +1,5 @@
 {
-  "excludes": [
+  "parse_excludes": [
     ".github/workflows/ci.yml",
     "templi.json",
     "test/mocks/index.ts",

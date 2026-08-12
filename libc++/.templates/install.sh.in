@@ -1,9 +1,0 @@
-#! /bin/bash
-git clone -b v@{{PROJECT_NAME_UPPERCASE}}_LIB_VERSION@ {{GIT_URL}} 
-cd @{{PROJECT_NAME_UPPERCASE}}_LIB_NAME@ 
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release -S .. -B .
-sudo make install
-cd ../..
-rm -rf {{PROJECT_NAME}} 

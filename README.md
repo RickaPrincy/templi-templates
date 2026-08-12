@@ -14,12 +14,3 @@ templi generate -t https://github.com/RickaPrincy/templi-templates.git -s <templ
 
 ```bash
 templi generate -t https://github.com/RickaPrincy/templi-templates.git -s "nestjs" -o ~/nestjs
-```
-
-```bash
-templi generate -t https://github.com/RickaPrincy/templi-templates.git -s "libc++" -o ~/libc++
-```
-
-```bash
-templi generate -t https://github.com/RickaPrincy/templi-templates.git -s "fjpa" -o ~/myproject
-```
